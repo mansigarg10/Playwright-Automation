@@ -1,0 +1,29 @@
+{
+  "name": "playwight-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regressionTest": "npx playwright test",
+    "webTest": "npx playwright test --grep=@Web",
+    "apiTest": "npx playwright test --grep=@API",
+    "safariBrowserTest": "npx playwright test --config playwright.config1.js --project=safari",
+    "chromeBrowserTest": "npx playwright test --config playwright.config1.js --project=chrome",
+    "generateAllureReport": "npx playwright test --grep=@Web --reporter=line,allure-playwright"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@azure/identity": "^4.13.1",
+    "@azure/playwright": "^1.1.6",
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^24.10.0",
+    "allure-playwright": "^3.10.2",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^13.2.0"
+  }
+}
