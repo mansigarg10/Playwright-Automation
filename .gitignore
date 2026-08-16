@@ -6,3 +6,18 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Cucumber Reports
+cucumber-report.html
+/reports/
+
+# Screenshots
+/screenshots/
+/screenshot/
+
+# Environment files
+.env
+
+# IDE / OS files
+.vscode/
+.DS_Store
