@@ -1,6 +1,6 @@
 const { defineConfig } = require('@playwright/test');
 const { createAzurePlaywrightConfig, ServiceOS } = require('@azure/playwright');
-const { AzureCliCredential } = require('@azure/identity');
+const { DefaultAzureCredential } = require('@azure/identity');
 const config = require('./playwright.config');
 
 /* Learn more about service configuration at https://aka.ms/pww/docs/config */
@@ -10,7 +10,7 @@ export default defineConfig(
     exposeNetwork: '<loopback>',
     connectTimeout: 3 * 60 * 1000, // 3 minutes
     os: ServiceOS.LINUX,
-    credential: new AzureCliCredential(),
+    credential: new DefaultAzureCredential(),
    // reporter:[["html"], ["@azure/playwright/reporter"],]
   }),
   {
