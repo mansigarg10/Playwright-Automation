@@ -70,7 +70,7 @@ pipeline {
 
         success {
             emailext(
-                to: 'YOUR_EMAIL@example.com',
+                to: 'mansigarg1001@gmail.com',
                 subject: "PASS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """Build status: SUCCESS
 Job: ${env.JOB_NAME}
@@ -82,7 +82,7 @@ Open the build URL to view the published test reports."""
 
         unsuccessful {
             emailext(
-                to: 'YOUR_EMAIL@example.com',
+                to: 'mansigarg1001@gmail.com',
                 subject: "BUILD FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """Build status: ${currentBuild.currentResult}
 Job: ${env.JOB_NAME}
