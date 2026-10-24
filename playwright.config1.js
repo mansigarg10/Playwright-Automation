@@ -27,7 +27,7 @@ export default defineConfig({
              trace: 'retain-on-failure',
              browserName : "chromium",
              headless : true,
-             screenshot: 'on'
+             screenshot: 'only-on-failure',
           }
      },
      {
@@ -36,7 +36,7 @@ export default defineConfig({
              trace: 'retain-on-failure',
              browserName : "webkit",
              headless : true,
-             screenshot: 'on',
+             screenshot: 'only-on-failure',
              //...devices['Galaxy Note 3']
             //viewport: { width: 4712, height: 719932},
             video: 'retain-on-failure',
@@ -46,7 +46,14 @@ export default defineConfig({
           }
      }
   ],
-  reporter: 'html',
+  reporter: [
+  ['list'],
+  ['junit', { outputFile: 'test-results/junit.xml' }],
+  ['html', {
+    outputFolder: 'playwright-report',
+    open: 'never'
+  }]
+],
   
 });
 
