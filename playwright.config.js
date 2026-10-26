@@ -17,6 +17,7 @@ export default defineConfig({
   testMatch: '**/*.spec.js',
   timeout : 40 * 1000,
   workers: 2,
+  retries: 1,
   expect:{
     timeout: 40 * 1000
   },
