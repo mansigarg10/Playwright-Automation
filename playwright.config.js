@@ -16,15 +16,24 @@ export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.js',
   timeout : 40 * 1000,
+  workers: 1,
+  retries: 1,
   expect:{
     timeout: 40 * 1000
   },
-  reporter: 'html',
+  reporter: [
+  ['list'],
+  ['junit', { outputFile: 'test-results/junit.xml' }],
+  ['html', {
+    outputFolder: 'playwright-report',
+    open: 'never'
+  }]
+],
   use: {
     trace: 'retain-on-failure',
     browserName : "chromium",
-    headless : false,
-    screenshot: 'on'
+    headless : true,
+    screenshot: 'only-on-failure',
     
   },
 
