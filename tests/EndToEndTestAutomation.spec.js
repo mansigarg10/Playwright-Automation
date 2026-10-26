@@ -12,6 +12,7 @@ test(`Login for ${data.username}`, async ({ page }) => {
    const poManager = new POManager(page,expect);
    await poManager.getLoginPage().goto("https://rahulshettyacademy.com/client/");
    await poManager.getLoginPage().login(data.username, data.password);
+   
   
    await poManager.getHomePage().searchProductAddToCart();
    await poManager.getCartPage().checkout();

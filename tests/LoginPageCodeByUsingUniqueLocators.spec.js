@@ -14,11 +14,11 @@ test("Login with valid credentials", async ({ page }) => {
    await page.locator('.cart ul li').first().waitFor();
    await expect(page.getByText("ZARA COAT 3")).toBeVisible();
    await page.getByRole("button", { name: "Checkout" }).click();
-   const monthDropdown = page.locator("select.input1").first();
+   const monthDropdown = page.locator("//select[contains(@class,'input')]").first();
    await monthDropdown.click();
    await monthDropdown.selectOption("05");
 
-   const dateDropdown = page.locator("select.input").last();
+   const dateDropdown = page.locator("//select[contains(@class,'input')]").last();
    await dateDropdown.click();
    await dateDropdown.selectOption("23");
    await page.locator("input[type='text']").nth(1).fill("234");
