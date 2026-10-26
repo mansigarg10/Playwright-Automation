@@ -16,7 +16,7 @@ export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.js',
   timeout : 40 * 1000,
-  workers: 2,
+  workers: 1,
   retries: 1,
   expect:{
     timeout: 40 * 1000
