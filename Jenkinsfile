@@ -88,7 +88,7 @@ Open the build URL to view the published test reports."""
 Job: ${env.JOB_NAME}
 Build: ${env.BUILD_URL}
 
-Open the build URL to view the console output and available test reports."""
+Hey Mansi, This is to inform you that the build has failed. Please open the build URL to view the console output and available test reports."""
             )
         }
     }
