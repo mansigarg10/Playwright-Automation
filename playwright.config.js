@@ -16,7 +16,7 @@ export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.js',
   timeout : 40 * 1000,
-  workers: 1,
+  workers: 2,
   expect:{
     timeout: 40 * 1000
   },
@@ -31,7 +31,7 @@ export default defineConfig({
   use: {
     trace: 'retain-on-failure',
     browserName : "chromium",
-    headless : false,
+    headless : true,
     screenshot: 'only-on-failure',
     
   },
